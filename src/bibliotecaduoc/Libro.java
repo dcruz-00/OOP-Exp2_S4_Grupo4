@@ -3,18 +3,25 @@ package bibliotecaduoc;
 
 public class Libro {
 
+    // Atributos
+    private int indiceLibro;
     private String nombre;
     private String autor;
     private Boolean disponible;
 
-    // c
-    public Libro(String nombre, String autor, Boolean disponible) {
+    // Constructor
+    public Libro(int indiceLibro, String nombre, String autor, Boolean disponible) {
+        this.indiceLibro = indiceLibro;
         this.nombre = nombre;
         this.autor = autor;
         this.disponible = disponible;
     }
 
-    // g
+    // Getters
+    public int getIndiceLibro() {
+        return indiceLibro;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -27,8 +34,11 @@ public class Libro {
         return disponible;
     }
 
+    // Setters
+    public void setIndiceLibro(int indiceLibro) {
+        this.indiceLibro = indiceLibro;
+    }
 
-    // s
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

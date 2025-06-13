@@ -10,7 +10,7 @@ public class Usuario {
     
     HashMap<String, String> usuarios = new HashMap<>();
 
-    // c
+    // Constructor
     public Usuario(String rut, String nombre, String apellidoPaterno, String apellidoMaterno) {
         this.rut = rut;
         this.nombre = nombre;
@@ -18,7 +18,7 @@ public class Usuario {
         this.apellidoMaterno = apellidoMaterno;
     }
 
-    // g
+    // Getter
     public String getRut() {
         return rut;
     }
@@ -39,7 +39,7 @@ public class Usuario {
         return usuarios;
     }
 
-    // s
+    // Setter
     public void setRut(String rut) {
         this.rut = rut;
     }
