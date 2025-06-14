@@ -7,7 +7,12 @@ public class Libro {
     private int indiceLibro;
     private String nombre;
     private String autor;
-    private Boolean disponible;
+    private Boolean disponible = true;
+    
+    //
+    public boolean isDisponible() {
+    return disponible;
+    }
 
     // Constructor
     public Libro(int indiceLibro, String nombre, String autor, Boolean disponible) {
