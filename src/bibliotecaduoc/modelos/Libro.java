@@ -1,4 +1,4 @@
-package bibliotecaduoc;
+package bibliotecaduoc.modelos;
 
 public class Libro {
 

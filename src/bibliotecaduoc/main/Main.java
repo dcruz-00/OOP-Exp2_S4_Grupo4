@@ -1,8 +1,10 @@
-package bibliotecaduoc;
+package bibliotecaduoc.main;
 
+import bibliotecaduoc.servicios.Biblioteca;
+import bibliotecaduoc.modelos.Usuario;
 import java.util.Scanner;
 
-public class BibliotecaDUOC {
+public class Main {
 
     Biblioteca biblioteca = new Biblioteca();
     private final Scanner scanner = new Scanner(System.in);
@@ -17,7 +19,7 @@ public class BibliotecaDUOC {
         "------------------------",};
 
     public static void main(String[] args) {
-        BibliotecaDUOC app = new BibliotecaDUOC();
+        Main app = new Main();
         app.ejecutarMenu();
     }
 

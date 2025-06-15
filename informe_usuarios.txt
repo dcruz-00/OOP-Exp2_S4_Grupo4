@@ -1,0 +1,11 @@
+
+=== INFORME DE USUARIOS ===
+Usuario: A A A [33.333.333-3]
+Libro: Así habló Zaratrustra (Autor(a): Federico Nietzsche)  Código de préstamo: [#3]
+
+Usuario: D D D [22.222.222-2]
+Libro: El Quijote (Autor(a): Cervantes)  Código de préstamo: [#2]
+
+Usuario: E E E [11.111.111-1]
+Libro: Las Aventuras de Duco (Autor(a): Emilia Acevedo)  Código de préstamo: [#1]
+

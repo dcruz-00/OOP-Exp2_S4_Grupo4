@@ -1,5 +1,6 @@
-package bibliotecaduoc;
+package bibliotecaduoc.modelos;
 
+import bibliotecaduoc.servicios.Validaciones;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -9,10 +10,10 @@ import java.util.List;
 
 public class Usuario {
 
-    private String rut;
-    private String nombre;
-    private String apellidoPaterno;
-    private String apellidoMaterno;
+    private final String rut;
+    private final String nombre;
+    private final String apellidoPaterno;
+    private final String apellidoMaterno;
 
     private static final HashMap<String, Usuario> usuarios = new HashMap<>();
     private List<Libro> librosPrestados = new ArrayList<>();
@@ -58,26 +59,26 @@ public class Usuario {
         Pattern patronRut = Pattern.compile("^[0-9]{1,2}\\.[0-9]{3}\\.[0-9]{3}-[0-9Kk]$");
 
         while (true) {
-            System.out.println("Ingrese su RUT (formato: XX.XXX.XXX-X): ");
+            System.out.println("\nIngrese su RUT (formato: XX.XXX.XXX-X): ");
             rut = scanner.nextLine().trim();
             if (!patronRut.matcher(rut).matches()) {
-                System.out.println("Formato de RUT inválido. Use puntos y guión (XX.XXX.XXX-X).");
+                System.out.println("\nFormato de RUT inválido. Use puntos y guión (XX.XXX.XXX-X).");
                 continue;
             }
             if (usuarios.containsKey(rut)) {
-                System.out.println("Este RUT ya está registrado. Intente con otro.");
+                System.out.println("\nEste RUT ya está registrado. Intente con otro.");
                 continue;
             }
             break;
         }
 
-        String nombre = validaciones.validarYCapitalizar("Ingrese su nombre:");
-        String apellidoPaterno = validaciones.validarYCapitalizar("Ingrese su apellido paterno:");
-        String apellidoMaterno = validaciones.validarYCapitalizar("Ingrese su apellido materno:");
+        String nombre = validaciones.validarYCapitalizar("\nIngrese su nombre:");
+        String apellidoPaterno = validaciones.validarYCapitalizar("\nIngrese su apellido paterno:");
+        String apellidoMaterno = validaciones.validarYCapitalizar("\nIngrese su apellido materno:");
 
         Usuario nuevo = new Usuario(rut, nombre, apellidoPaterno, apellidoMaterno);
         usuarios.put(rut, nuevo);
-        System.out.println("¡Registro exitoso! Bienvenido(a) " + nuevo.getNombreCompleto() + " [" + rut + "].");
+        System.out.println("\n¡Registro exitoso! Bienvenido(a) " + nuevo.getNombreCompleto() + " [" + rut + "].");
     }
 
     public static boolean existeUsuario(String rut) {

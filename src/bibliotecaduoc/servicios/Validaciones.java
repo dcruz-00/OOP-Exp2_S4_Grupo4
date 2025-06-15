@@ -1,12 +1,12 @@
-package bibliotecaduoc;
+package bibliotecaduoc.servicios;
 
 import java.util.Scanner;
 
 public class Validaciones {
 
-    private final Scanner scanner = new Scanner(System.in);
+    public final Scanner scanner = new Scanner(System.in);
     
-    String validarYCapitalizar(String mensaje) {
+    public String validarYCapitalizar(String mensaje) {
         String texto;
         while (true) {
             System.out.println(mensaje);
